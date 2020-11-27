@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Steganography</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Rachel Shafer</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="drift.html">Drift Simulator</a></li>
+								<li><a href="steganography.html">Steganography Encoder and Decoder</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Steganography</h2>
+								<p>Team Project<br>Backend by Rachel Shafer<br>UI by<a href="#" > Natalie Shafer</a><br>Language: Java</p>
+							</div>
+						</header>
+						
+						
+						
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Project Description</h3>
+									<p><b>Introduction</b><br> Steganography is the practice of hiding secret data in plain sight. 
+										This secret data is hidden in other non-secret data like a file, text, or image. This application 
+										encodes a secret message or a secret image in a image and decodes a secret message or a secret 
+										image from an image.
+										<br><br>Below is the opening page of the application that provides the options to encodes or decode a 
+										secret message or a secret image in another image
+										<img src="steg 1.jpg"width="100%" height="100%">
+										</p>
+										
+
+									<p><b>Hidden Text in an Image</b><br> In order to encode text into an image, the image, 
+										text message, and message length is converted into byte arrays. The first 32 bytes of the 
+										image is reserved for storing the length of the message. Then the binary value of the length 
+										as well as the message is separated into individual bits and each bit replaces the least significant 
+										bit in the corresponding byte of the image. The text can then be decoded from the image by reversing 
+										the previous steps stated.<br><br>
+										The picture below shows the text encoding window, where the image on the left is the cover image before
+										the text is added and the image on the right is the cover image after the text is hidden in it. Below 
+										both pictures is a text box for the hidden text to be entered.
+										<img src="steg text encode.jpg" width="100%" height="100%">
+										<br><br>
+										The picture below shows the text decoding window, where the image shown is the image that contains the
+										hidden text. Below the pictures is a text box that displays the message that was hidden in the image.
+										<img src="steg text decode.jpg" width="100%" height="100%">
+										 </p>
+										
+									<p><b>Hidden Image in an Image</b><br> For the image encoding portion of this project, an image is hidden 
+										in another larger image. In order to encode an image into another image, the individual color values 
+										of each pixel are accessed and converted into binary values. The first row of pixels in the larger 
+										cover image are used to hide the height and width of the hidden image, the encoding method (3 or 4 bit), 
+										and a flag that shows there is something hidden in the image. In the 3 bit encoding method the top 3 most 
+										significant bits in each of the hidden image pixel components replace the lower significant bits in the 
+										corresponding cover image pixel components. The 4 bit encoding method is the same but the top 4 most 
+										significant bits of the hidden image replace the lower significant bits in the corresponding cover image 
+										pixel components. Then when a hidden image is decoded from another image, the hidden bits in the cover image 
+										are taken and used to recreate the hidden image. <br> <br>
+										The picture below shows the image encoding window, where the image on the left is the secret image, the 
+										image in the center in the cover image before the secret image is added and the image on the right is the 
+										cover image after the secret image is added. This example uses the 4 bit method of encoding.									
+										<img src="steg image encode 4.JPG" width="100%" height="100%" >
+										<br><br>
+										The picture below shows the image decoding window, where the image on the left is the image with the  
+										secret image hidden in it and the image on the right is the secret image that was decoded from the 
+										other image.
+										<img src="steg image decode 4.JPG" width="100%" height="100%">
+									</p>
+										<p>Although the two encoding methods are very similar, there are slight advantages and disadvantages of each. 
+										In the 3 bit method the hidden image will be hidden better than in the 4 bit method, but the quality of the 
+										hidden image after being decoded from the cover image will be worst in the 3 bit method as compared to the 
+										4 bit method.<br><br>
+										Below is two images that were hidden in another image. The image on the left was hidden using the 
+										3 bit method and the one on the right was hidden using the 4 bit method.
+										<img src="cats.JPG" width="100%" height="100%" >
+										 </p>
+										
+
+
+
+									<p>Team Project<br>Backend by Rachel Shafer<br>UI by<a href="#" > Natalie Shafer</a><br>Language: Java</p>
+
+									
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Contact</h2>
+						
+						<ul class="contact">
+							<li><a href="https://www.linkedin.com/in/rachelshafer?trk=people-guest_people_search-card" class="icon brands fa-linkedin"> https://www.linkedin.com/in/rachelshafer</a></li>
+							<li><a href="https://github.com/rachelshafer" class="icon brands fa-github"> https://github.com/rachelshafer</a></li>
+							<li><a href="mailto:rachelshafer95758@gmail.com" class="icon solid fa-envelope"> rachelshafer95758@gmail.com</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; 2020 Rachel Shafer</li>
+						</ul>
+					</div>
+				</section>
+
+		</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
